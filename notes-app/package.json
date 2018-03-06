@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "\"A simple notes app\"",
+  "main": "app.js",
+  "author": "Leonardo Amorim",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
