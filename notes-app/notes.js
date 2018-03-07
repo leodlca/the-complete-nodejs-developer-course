@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 
-const addNote = (title, body) => {
+function addNote(title, body) {
 
     const notes = readFileSafely();
     const newNote = {
@@ -22,7 +22,7 @@ const addNote = (title, body) => {
 
 }
 
-const listNotes = () => {
+function listNotes() {
 
     const notes = readFileSafely();
 
@@ -36,7 +36,7 @@ const listNotes = () => {
 
 }
 
-const readNote = (title) => {
+function readNote (title) {
 
     const notes = readFileSafely();
     const note = notes.find(note => note.title === title);
@@ -51,7 +51,7 @@ const readNote = (title) => {
 
 }
 
-const removeNote = (title) => {
+function removeNote (title) {
 
     const notes = readFileSafely();
     const indexOfNote = notes.findIndex(note => note.title === title);
@@ -67,14 +67,14 @@ const removeNote = (title) => {
 
 }
 
-const resetNotes = () => {
+function resetNotes() {
     
     fs.writeFileSync('./notes-data.json', JSON.stringify([]));
     return 0;
 
 }
 
-const readFileSafely = () => {
+function readFileSafely() {
 
     try {
         return JSON.parse(fs.readFileSync('notes-data.json'));
@@ -84,7 +84,7 @@ const readFileSafely = () => {
 
 }
 
-const printSafely = (message) => {
+function printSafely (message) {
 
     console.log(message ? message : 'Oops, there\'s nothing to see here.');
 

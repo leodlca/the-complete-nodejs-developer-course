@@ -11,3 +11,5 @@ A Simple cli app that creates, reads, lists and removes notes.
 6. To remove a note: node app.js remove -t "title"
 7. To remove all notes: node app.js reset
 8. To run tests: npm test
+
+MOCK TESTS!!!!!!!!!!!
